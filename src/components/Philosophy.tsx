@@ -28,7 +28,7 @@ export default function Philosophy() {
             <ScrollReveal delay={0} yOffset={30}>
               <div className="flex items-center gap-2 mb-4">
                 <Landmark className="h-4 w-4 text-yugen-gold" />
-                <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-yugen-gold font-semibold">
+                <span className="font-sans text-xs font-semibold tracking-wider uppercase tracking-[0.25em] text-yugen-gold font-semibold">
                   {PHILOSOPHY_CONTENT.kicker}
                 </span>
               </div>
@@ -60,7 +60,7 @@ export default function Philosophy() {
                 {PHILOSOPHY_CONTENT.metrics.map((metric, index) => (
                   <div key={index} className="space-y-2">
                     <span className="font-serif italic text-xl text-yugen-gold">{metric.title}</span>
-                    <p className="text-[11px] text-neutral-500 font-sans uppercase tracking-wider leading-relaxed">
+                    <p className="text-xs font-semibold text-neutral-500 font-sans uppercase tracking-wider leading-relaxed">
                       {metric.description}
                     </p>
                   </div>
@@ -85,7 +85,7 @@ export default function Philosophy() {
               </div>
 
               {/* Asymmetric Floating Vertical Wordmark (High-end editorial hallmark) */}
-              <div className="absolute -right-4 top-1/2 -translate-y-1/2 rotate-90 origin-right tracking-[0.4em] text-[10px] font-sans text-neutral-600 uppercase hidden lg:block whitespace-nowrap">
+              <div className="absolute -right-4 top-1/2 -translate-y-1/2 rotate-90 origin-right tracking-[0.4em] text-xs font-semibold tracking-wider font-sans text-neutral-600 uppercase hidden lg:block whitespace-nowrap">
                 {PHILOSOPHY_CONTENT.verticalLabel}
               </div>
             </ScrollReveal>

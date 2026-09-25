@@ -143,7 +143,7 @@ export default function BookingForm() {
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <div className="inline-flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-yugen-gold" />
-              <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-yugen-gold font-semibold">
+              <span className="font-sans text-xs font-semibold tracking-wider uppercase tracking-[0.25em] text-yugen-gold font-semibold">
                 Section 03 // Secure Verification Portal
               </span>
             </div>
@@ -162,7 +162,7 @@ export default function BookingForm() {
                 <button
                   type="button"
                   onClick={() => handleConsultationToggle(false)}
-                  className={`px-3 sm:px-6 py-2.5 text-[9px] sm:text-[10px] uppercase tracking-[0.1em] sm:tracking-[0.2em] transition-all cursor-pointer hyphens-auto ${
+                  className={`px-3 sm:px-6 py-2.5 text-[9px] sm:text-xs font-semibold tracking-wider uppercase tracking-[0.1em] sm:tracking-[0.2em] transition-all cursor-pointer hyphens-auto ${
                     !formData.isCustomConsultation 
                       ? 'bg-yugen-gold text-black font-semibold' 
                       : 'text-neutral-400 hover:text-white'
@@ -174,7 +174,7 @@ export default function BookingForm() {
                 <button
                   type="button"
                   onClick={() => handleConsultationToggle(true)}
-                  className={`px-3 sm:px-6 py-2.5 text-[9px] sm:text-[10px] uppercase tracking-[0.1em] sm:tracking-[0.2em] transition-all cursor-pointer hyphens-auto ${
+                  className={`px-3 sm:px-6 py-2.5 text-[9px] sm:text-xs font-semibold tracking-wider uppercase tracking-[0.1em] sm:tracking-[0.2em] transition-all cursor-pointer hyphens-auto ${
                     formData.isCustomConsultation 
                       ? 'bg-yugen-gold text-black font-semibold' 
                       : 'text-neutral-400 hover:text-white'
@@ -197,7 +197,7 @@ export default function BookingForm() {
               
               <div className="space-y-2">
                 <h3 className="font-serif text-3xl text-white font-light">Inquiry Dispatched</h3>
-                <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-yugen-gold">
+                <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-yugen-gold">
                   Reference ID: YUG-{Math.floor(Math.random() * 900000 + 100000)}
                 </p>
               </div>
@@ -236,7 +236,7 @@ export default function BookingForm() {
                   setIsSubmitted(false);
                   setFormData(prev => ({ ...prev, guestName: '', email: '', phone: '', specialRequests: '' }));
                 }}
-                className="px-8 py-3 bg-neutral-900 border border-white/10 text-[10px] uppercase tracking-widest text-yugen-gold hover:bg-neutral-850 hover:text-white transition-all cursor-pointer"
+                className="px-8 py-3 bg-neutral-900 border border-white/10 text-xs font-semibold tracking-wider uppercase tracking-widest text-yugen-gold hover:bg-neutral-850 hover:text-white transition-all cursor-pointer"
               >
                 Reset Allocation Form
               </button>
@@ -255,14 +255,14 @@ export default function BookingForm() {
                   {/* Select Area */}
                   {formData.isCustomConsultation ? (
                     <div className="sm:col-span-2 space-y-2">
-                      <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                      <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                         Buyout Specification
                       </label>
                       <select
                         name="experienceTier"
                         value={formData.experienceTier}
                         onChange={handleInputChange}
-                        className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white rounded-none cursor-pointer"
+                        className="w-full form-input-clean p-3 sm:p-3.5 text-base min-h-[44px] sm:text-base min-h-[44px] text-white rounded-none cursor-pointer"
                       >
                         {BUYOUT_OPTIONS.map(opt => (
                           <option key={opt.id} value={opt.id} className="bg-[#050505]">{opt.title} (From {formatCurrency(opt.basePrice)})</option>
@@ -272,14 +272,14 @@ export default function BookingForm() {
                   ) : (
                     <>
                       <div className="space-y-2">
-                        <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                        <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                           Accompaniment Level
                         </label>
                         <select
                           name="experienceTier"
                           value={formData.experienceTier}
                           onChange={handleInputChange}
-                          className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white rounded-none cursor-pointer"
+                          className="w-full form-input-clean p-3 sm:p-3.5 text-base min-h-[44px] sm:text-base min-h-[44px] text-white rounded-none cursor-pointer"
                         >
                           {DINING_TIERS.map(tier => (
                             <option key={tier.id} value={tier.id} className="bg-[#050505]">{tier.title} ({formatCurrency(tier.price)}/pp)</option>
@@ -288,14 +288,14 @@ export default function BookingForm() {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                        <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                           Guests Count
                         </label>
                         <select
                           name="guestsCount"
                           value={formData.guestsCount}
                           onChange={(e) => setFormData(prev => ({ ...prev, guestsCount: parseInt(e.target.value) }))}
-                          className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white rounded-none cursor-pointer"
+                          className="w-full form-input-clean p-3 sm:p-3.5 text-base font-semibold text-white rounded-none cursor-pointer"
                         >
                           {[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
                             <option key={num} value={num} className="bg-[#050505]">{num} {num === 1 ? 'Guest' : 'Guests'}</option>
@@ -309,7 +309,7 @@ export default function BookingForm() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Date and Time slots */}
                   <div className="space-y-2">
-                    <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                    <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                       Calendar Allocation
                     </label>
                     <div className="relative">
@@ -319,20 +319,20 @@ export default function BookingForm() {
                         required
                         value={formData.date}
                         onChange={handleInputChange}
-                        className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white rounded-none cursor-pointer"
+                        className="w-full form-input-clean p-3 sm:p-3.5 text-base min-h-[44px] sm:text-base min-h-[44px] text-white rounded-none cursor-pointer"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                    <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                       Temporal Sitting Slates
                     </label>
                     <select
                       name="timeSlot"
                       value={formData.timeSlot}
                       onChange={handleInputChange}
-                      className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white rounded-none cursor-pointer"
+                      className="w-full form-input-clean p-3 sm:p-3.5 text-base min-h-[44px] sm:text-base min-h-[44px] text-white rounded-none cursor-pointer"
                     >
                       <option value="17:30" className="bg-[#050505]">First Seating // 17:30</option>
                       <option value="20:15" className="bg-[#050505]">Second Seating // 20:15</option>
@@ -349,7 +349,7 @@ export default function BookingForm() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                      <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                         Full Name / Principal
                       </label>
                       <input
@@ -359,12 +359,12 @@ export default function BookingForm() {
                         placeholder="e.g., Jean-Luc Sterling"
                         value={formData.guestName}
                         onChange={handleInputChange}
-                        className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white placeholder-neutral-600 rounded-none"
+                        className="w-full form-input-clean p-3 sm:p-3.5 text-base min-h-[44px] sm:text-base min-h-[44px] text-white placeholder-neutral-600 rounded-none"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                      <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                         Secure Contact Phone
                       </label>
                       <input
@@ -374,14 +374,14 @@ export default function BookingForm() {
                         placeholder="e.g., +1 (555) 0192"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white placeholder-neutral-600 rounded-none"
+                        className="w-full form-input-clean p-3 sm:p-3.5 text-base min-h-[44px] sm:text-base min-h-[44px] text-white placeholder-neutral-600 rounded-none"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 gap-6">
                     <div className="space-y-2">
-                      <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                      <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                         Encrypted Email Coordinates
                       </label>
                       <input
@@ -391,13 +391,13 @@ export default function BookingForm() {
                         placeholder="e.g., director@sterlingcomp.co"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white placeholder-neutral-600 rounded-none"
+                        className="w-full form-input-clean p-3 sm:p-3.5 text-base min-h-[44px] sm:text-base min-h-[44px] text-white placeholder-neutral-600 rounded-none"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2 pt-2">
-                    <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
+                    <label className="block text-sm font-semibold tracking-wider uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                       Anomalies or Dietary Sanctuaries (Optional)
                     </label>
                     <textarea
@@ -406,7 +406,7 @@ export default function BookingForm() {
                       placeholder="e.g., Strict warm shell crustacean sensitivities..."
                       value={formData.specialRequests}
                       onChange={handleInputChange}
-                      className="w-full form-input-clean p-3 sm:p-3.5 text-xs sm:text-sm text-white placeholder-neutral-600 rounded-none resize-none"
+                      className="w-full form-input-clean p-3 sm:p-3.5 text-base min-h-[44px] sm:text-base min-h-[44px] text-white placeholder-neutral-600 rounded-none resize-none"
                     />
                   </div>
                 </div>
@@ -417,7 +417,7 @@ export default function BookingForm() {
               <div className="col-span-1 lg:col-span-5 bg-yugen-charcoal border border-white/5 p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
                 
                 <div className="space-y-6">
-                  <h4 className="font-sans text-[10px] uppercase tracking-[0.25em] text-yugen-gold font-semibold border-b border-white/5 pb-3">
+                  <h4 className="font-sans text-xs font-semibold tracking-wider uppercase tracking-[0.25em] text-yugen-gold font-semibold border-b border-white/5 pb-3">
                     REGISTRY SUMMARY &amp; CURATION
                   </h4>
 
@@ -441,7 +441,7 @@ export default function BookingForm() {
                             ? `Buyout Catering Platinum Caviar (${formatCurrency(450, { includeSign: true })})` 
                             : `Personal Royal Caviar Service (${formatCurrency(60, { includeSign: true })}/pp)`}
                         </span>
-                        <span className="font-sans text-[10px] text-neutral-500 leading-normal block mt-0.5 break-words whitespace-normal">
+                        <span className="font-sans text-xs font-semibold tracking-wider text-neutral-500 leading-normal block mt-0.5 break-words whitespace-normal">
                           Acquire 15g premium wild Caspian Caviar with hand-turned mother of pearl spoonware.
                         </span>
                       </div>
@@ -461,7 +461,7 @@ export default function BookingForm() {
                             ? `Lead sommelier Private Sake Cellar flight (${formatCurrency(850, { includeSign: true })})` 
                             : `Standard Sake/Wine Curated Flights (${formatCurrency(95, { includeSign: true })}/pp)`}
                         </span>
-                        <span className="font-sans text-[10px] text-neutral-500 leading-normal block mt-0.5 break-words whitespace-normal">
+                        <span className="font-sans text-xs font-semibold tracking-wider text-neutral-500 leading-normal block mt-0.5 break-words whitespace-normal">
                           Unveil rare vintage unpasteurized Daiginjos sourced exclusively from rural micro-breweries.
                         </span>
                       </div>
@@ -567,7 +567,7 @@ export default function BookingForm() {
 
                   {formData.isCustomConsultation && (
                     <div className="p-3 bg-yugen-gold/5 border border-yugen-gold/15 rounded-none">
-                      <p className="font-sans text-[10px] text-yugen-gold leading-relaxed">
+                      <p className="font-sans text-xs font-semibold tracking-wider text-yugen-gold leading-relaxed">
                         Notice: As an elite buyout priced over {formatCurrency(3500)}, our staff will execute a private security screening and coordinate high-custom logistics directly via secure line.
                       </p>
                     </div>
@@ -575,7 +575,7 @@ export default function BookingForm() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-neutral-100 hover:bg-yugen-gold text-black font-semibold text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer rounded-none border border-transparent hover:border-yugen-gold hover:bg-transparent hover:text-white"
+                    className="w-full py-4 bg-neutral-100 hover:bg-yugen-gold text-black font-semibold text-base font-semibold min-h-[44px] tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer rounded-none border border-transparent hover:border-yugen-gold hover:bg-transparent hover:text-white"
                   >
                     <span>{formData.isCustomConsultation ? 'Request Private Curation' : 'Dispatch Counter Request'}</span>
                     <ArrowRight className="h-4 w-4" />

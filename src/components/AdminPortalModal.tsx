@@ -69,9 +69,9 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-mono text-xs uppercase tracking-wider text-amber-400 font-bold">YŪGEN SENSORY OS</span>
-                <span className="text-[10px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-400 font-mono">v1.0.0 VIP</span>
+                <span className="text-xs font-semibold tracking-wider px-2 py-0.5 rounded bg-zinc-800 text-zinc-400 font-mono">v1.0.0 VIP</span>
               </div>
-              <p className="text-xs text-zinc-400">Sanctuary Command Center &amp; Counter Ledger</p>
+              <p className="text-base text-zinc-200 leading-relaxed">Sanctuary Command Center &amp; Counter Ledger</p>
             </div>
           </div>
           <button
@@ -90,7 +90,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
             </div>
             <div className="space-y-2">
               <h3 className="font-display font-medium text-xl text-white">Sanctuary Gate Authentication</h3>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-base text-zinc-200 leading-relaxed leading-relaxed">
                 Enter your administrative key to access the omakase seating docket, sommelier allocations, and Supabase telemetry.
               </p>
             </div>
@@ -180,7 +180,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                     {metrics.map((m, idx) => (
                       <div key={idx} className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-2">
                         <div className="flex items-center justify-between">
-                          <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">{m.label}</span>
+                          <span className="text-xs font-semibold tracking-wider font-mono text-zinc-400 uppercase tracking-wider">{m.label}</span>
                           <m.icon className={`w-4 h-4 ${m.color}`} />
                         </div>
                         <p className="text-xl font-bold font-mono text-white">{m.value}</p>
@@ -212,7 +212,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                   </div>
                   <div className="border border-zinc-800 rounded-xl overflow-hidden">
                     <table className="w-full text-left text-xs">
-                      <thead className="bg-zinc-900 text-zinc-400 font-mono uppercase text-[10px] border-b border-zinc-800">
+                      <thead className="bg-zinc-900 text-zinc-400 font-mono uppercase text-xs font-semibold tracking-wider border-b border-zinc-800">
                         <tr>
                           <th className="p-3">Ref ID</th>
                           <th className="p-3">Guest Name</th>
@@ -230,7 +230,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                             <td className="p-3 text-zinc-400">{r.experience}</td>
                             <td className="p-3">{r.date}</td>
                             <td className="p-3">
-                              <span className={`px-2 py-0.5 rounded text-[10px] uppercase ${
+                              <span className={`px-2 py-0.5 rounded text-xs font-semibold tracking-wider uppercase ${
                                 r.status === 'confirmed' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
                                 r.status === 'mise-en-place' ? 'bg-amber-950 text-amber-400 border border-amber-800' :
                                 'bg-zinc-800 text-zinc-400'
@@ -263,7 +263,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                             Aroma Note: {c.aroma}
                           </p>
                         </div>
-                        <span className="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-[10px] uppercase">
+                        <span className="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-xs font-semibold tracking-wider uppercase">
                           {c.status}
                         </span>
                       </div>
@@ -276,20 +276,20 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-2">
                     <h4 className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Database Architecture</h4>
-                    <p className="text-xs text-zinc-400 leading-relaxed">
+                    <p className="text-base text-zinc-200 leading-relaxed leading-relaxed">
                       Production PostgreSQL database wired with Row Level Security (RLS) policies. Includes tables for reservations, sensory course catalog, and private buyout consultations.
                     </p>
                     <div className="grid grid-cols-3 gap-2 pt-2">
                       <div className="p-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-center">
-                        <p className="text-[10px] font-mono text-zinc-500">TABLE 1</p>
+                        <p className="text-xs font-semibold tracking-wider font-mono text-zinc-300">TABLE 1</p>
                         <p className="text-xs font-mono font-bold text-white">reservations</p>
                       </div>
                       <div className="p-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-center">
-                        <p className="text-[10px] font-mono text-zinc-500">TABLE 2</p>
+                        <p className="text-xs font-semibold tracking-wider font-mono text-zinc-300">TABLE 2</p>
                         <p className="text-xs font-mono font-bold text-white">sensory_courses</p>
                       </div>
                       <div className="p-2.5 rounded-lg bg-zinc-950 border border-zinc-800 text-center">
-                        <p className="text-[10px] font-mono text-zinc-500">TABLE 3</p>
+                        <p className="text-xs font-semibold tracking-wider font-mono text-zinc-300">TABLE 3</p>
                         <p className="text-xs font-mono font-bold text-white">buyout_inquiries</p>
                       </div>
                     </div>

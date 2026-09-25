@@ -49,7 +49,7 @@ export default function Hero({ onReserveClick, onExploreClick }: HeroProps) {
         />
 
         {/* Cinematic Understated Subtext */}
-        <p className="font-sans text-xs sm:text-sm text-neutral-400/90 leading-relaxed max-w-xl mx-auto tracking-wide">
+        <p className="font-sans text-base font-semibold text-neutral-400/90 leading-relaxed max-w-xl mx-auto tracking-wide">
           {HERO_CONTENT.description}
         </p>
 
@@ -57,7 +57,7 @@ export default function Hero({ onReserveClick, onExploreClick }: HeroProps) {
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto" id="hero-actions-container">
           <button
             onClick={onReserveClick}
-            className="w-full sm:w-1/2 h-14 flex items-center justify-center px-6 bg-transparent border border-yugen-gold text-yugen-gold hover:bg-yugen-gold/10 hover:text-white font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 pointer-events-auto cursor-pointer"
+            className="w-full sm:w-1/2 h-14 flex items-center justify-center px-6 bg-transparent border border-yugen-gold text-yugen-gold hover:bg-yugen-gold/10 hover:text-white font-semibold text-base font-semibold min-h-[44px] uppercase tracking-[0.2em] transition-all duration-300 pointer-events-auto cursor-pointer"
             id="hero-reserve-btn"
           >
             <span className="block leading-none">{HERO_CONTENT.reserveCta}</span>
@@ -66,7 +66,7 @@ export default function Hero({ onReserveClick, onExploreClick }: HeroProps) {
           <button 
             onClick={onExploreClick}
             id="hero-explore-btn"
-            className="w-full sm:w-1/2 h-14 flex items-center justify-center px-6 bg-transparent border border-white/10 hover:border-yugen-gold/30 text-neutral-400 hover:text-yugen-gold font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 cursor-pointer"
+            className="w-full sm:w-1/2 h-14 flex items-center justify-center px-6 bg-transparent border border-white/10 hover:border-yugen-gold/30 text-neutral-400 hover:text-yugen-gold font-semibold text-base font-semibold min-h-[44px] uppercase tracking-[0.2em] transition-all duration-300 cursor-pointer"
           >
             <span className="block leading-none">{HERO_CONTENT.reviewCta}</span>
           </button>

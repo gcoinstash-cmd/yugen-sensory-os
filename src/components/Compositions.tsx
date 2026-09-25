@@ -32,7 +32,7 @@ export default function Compositions() {
             <ScrollReveal delay={0} yOffset={20}>
               <div className="flex items-center justify-center md:justify-start gap-2">
                 <Compass className="h-4 w-4 text-yugen-gold" />
-                <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-yugen-gold font-semibold">
+                <span className="font-sans text-xs font-semibold tracking-wider uppercase tracking-[0.25em] text-yugen-gold font-semibold">
                   {MENU_HEADER_CONTENT.kicker}
                 </span>
               </div>
@@ -133,7 +133,7 @@ export default function Compositions() {
                       
                       <div className="space-y-6">
                         <div>
-                          <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-yugen-gold block mb-1">
+                          <span className="font-sans text-xs font-semibold tracking-wider uppercase tracking-[0.3em] text-yugen-gold block mb-1">
                             {tier.subtitle}
                           </span>
                           <h3 className="font-serif text-3xl text-white font-light">
@@ -226,7 +226,7 @@ export default function Compositions() {
                       </div>
 
                       <div className="mt-8 pt-4 border-t border-white/5">
-                        <p className="font-sans text-[10px] text-yugen-gold/80 tracking-wide">
+                        <p className="font-sans text-xs font-semibold tracking-wider text-yugen-gold/80 tracking-wide">
                           {item.sensoryNote}
                         </p>
                       </div>
@@ -278,7 +278,7 @@ export default function Compositions() {
                       </div>
 
                       <div className="mt-8 pt-4 border-t border-white/5">
-                        <p className="font-sans text-[10px] text-yugen-gold italic">
+                        <p className="font-sans text-xs font-semibold tracking-wider text-yugen-gold italic">
                           {item.sensoryNote}
                         </p>
                       </div>

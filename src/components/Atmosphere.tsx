@@ -27,7 +27,7 @@ export default function Atmosphere() {
               <ScrollReveal delay={0} yOffset={25}>
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-yugen-gold" />
-                  <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-yugen-gold font-semibold">
+                  <span className="font-sans text-xs font-semibold tracking-wider uppercase tracking-[0.25em] text-yugen-gold font-semibold">
                     {SCENT_PROFILE.kicker}
                   </span>
                 </div>
@@ -56,13 +56,13 @@ export default function Atmosphere() {
                       0{index + 1}
                     </span>
                     <div className="space-y-1">
-                      <h4 className="font-sans text-[10px] uppercase tracking-widest text-yugen-gold/90 font-semibold">
+                      <h4 className="font-sans text-xs font-semibold tracking-wider uppercase tracking-widest text-yugen-gold/90 font-semibold">
                         {note.level}
                       </h4>
                       <p className="font-serif italic text-lg text-white leading-snug">
                         {note.ingredients}
                       </p>
-                      <p className="font-sans text-[11px] text-neutral-500 leading-relaxed block pt-1">
+                      <p className="font-sans text-xs font-semibold text-neutral-500 leading-relaxed block pt-1">
                         {note.description}
                       </p>
                     </div>
@@ -79,7 +79,7 @@ export default function Atmosphere() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <Volume2 className="h-4 w-4 text-neutral-500" />
-                    <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-neutral-500 font-semibold">
+                    <span className="font-sans text-xs font-semibold tracking-wider uppercase tracking-[0.25em] text-neutral-500 font-semibold">
                       Material Craft // Acoustic Isolation
                     </span>
                   </div>
@@ -97,10 +97,10 @@ export default function Atmosphere() {
                     <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-yugen-gold block font-semibold">
                       Meticulous Material
                     </span>
-                    <p className="font-sans text-[11px] text-neutral-400 font-medium">
+                    <p className="font-sans text-xs font-semibold text-neutral-400 font-medium">
                       26Hz Basalt Sub-Floor
                     </p>
-                    <p className="font-sans text-[11px] text-neutral-500 leading-relaxed">
+                    <p className="font-sans text-xs font-semibold text-neutral-500 leading-relaxed">
                       The counter foundation is suspended on dense volcanic basalt blocks, filtering surrounding vibration noise down to zero.
                     </p>
                   </div>
@@ -109,10 +109,10 @@ export default function Atmosphere() {
                     <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-yugen-gold block font-semibold">
                       Acoustic Resonance
                     </span>
-                    <p className="font-sans text-[11px] text-neutral-400 font-medium">
+                    <p className="font-sans text-xs font-semibold text-neutral-400 font-medium">
                       Silent Analog Acoustics
                     </p>
-                    <p className="font-sans text-[11px] text-neutral-500 leading-relaxed">
+                    <p className="font-sans text-xs font-semibold text-neutral-500 leading-relaxed">
                       We play no background streams. Instead, we architect sound with natural limestone panels that absorb high frequencies, allowing chew and breath to harmonize.
                     </p>
                   </div>

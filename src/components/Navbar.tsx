@@ -73,19 +73,19 @@ export default function Navbar({
           <div className="hidden md:flex items-center gap-10">
             <button 
               onClick={onPhilosophyClick}
-              className="text-[11px] uppercase tracking-[0.25em] text-neutral-400 hover:text-yugen-gold transition-colors cursor-pointer"
+              className="text-base font-semibold min-h-[44px] font-semibold uppercase tracking-[0.25em] text-neutral-400 hover:text-yugen-gold transition-colors cursor-pointer"
             >
               The Mindset
             </button>
             <button 
               onClick={onMenuClick}
-              className="text-[11px] uppercase tracking-[0.25em] text-neutral-400 hover:text-yugen-gold transition-colors cursor-pointer"
+              className="text-base font-semibold min-h-[44px] font-semibold uppercase tracking-[0.25em] text-neutral-400 hover:text-yugen-gold transition-colors cursor-pointer"
             >
               The Compositions
             </button>
             <button 
               onClick={onAtmosphereClick}
-              className="text-[11px] uppercase tracking-[0.25em] text-neutral-400 hover:text-yugen-gold transition-colors cursor-pointer"
+              className="text-base font-semibold min-h-[44px] font-semibold uppercase tracking-[0.25em] text-neutral-400 hover:text-yugen-gold transition-colors cursor-pointer"
             >
               Sensory Atmosphere
             </button>
@@ -95,7 +95,7 @@ export default function Navbar({
           <div className="hidden md:flex items-center gap-4">
             <button
               onClick={onBookClick}
-              className="px-6 py-2.5 bg-neutral-900 border border-white/10 text-yugen-gold [text-shadow:_0_0_12px_rgba(197,168,128,0.2)] hover:border-yugen-gold/30 hover:bg-neutral-800 transition-all font-sans text-[10px] uppercase tracking-[0.2em]"
+              className="px-6 py-2.5 bg-neutral-900 border border-white/10 text-yugen-gold [text-shadow:_0_0_12px_rgba(197,168,128,0.2)] hover:border-yugen-gold/30 hover:bg-neutral-800 transition-all font-sans text-base font-semibold min-h-[44px] font-semibold tracking-wider uppercase tracking-[0.2em]"
             >
               Reserve Counter
             </button>
@@ -121,7 +121,7 @@ export default function Navbar({
                 onPhilosophyClick();
                 setIsOpen(false);
               }}
-              className="text-[11px] text-left uppercase tracking-[0.25em] text-neutral-400 hover:text-white"
+              className="text-xs font-semibold text-left uppercase tracking-[0.25em] text-neutral-400 hover:text-white"
             >
               The Mindset
             </button>
@@ -130,7 +130,7 @@ export default function Navbar({
                 onMenuClick();
                 setIsOpen(false);
               }}
-              className="text-[11px] text-left uppercase tracking-[0.25em] text-neutral-400 hover:text-white"
+              className="text-xs font-semibold text-left uppercase tracking-[0.25em] text-neutral-400 hover:text-white"
             >
               The Compositions
             </button>
@@ -139,7 +139,7 @@ export default function Navbar({
                 onAtmosphereClick();
                 setIsOpen(false);
               }}
-              className="text-[11px] text-left uppercase tracking-[0.25em] text-neutral-400 hover:text-white"
+              className="text-xs font-semibold text-left uppercase tracking-[0.25em] text-neutral-400 hover:text-white"
             >
               Sensory Atmosphere
             </button>

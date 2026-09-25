@@ -49,10 +49,10 @@ export default function Toast({
               </div>
             </div>
             <div>
-              <p className="text-[10px] tracking-[0.22em] uppercase text-yugen-gold font-bold leading-none mb-1">
+              <p className="text-xs font-semibold tracking-wider tracking-[0.22em] uppercase text-yugen-gold font-bold leading-none mb-1">
                 SECURE SYSTEM LINK
               </p>
-              <p className="text-[10px] tracking-[0.16em] uppercase text-neutral-300 font-medium leading-relaxed font-mono">
+              <p className="text-xs font-semibold tracking-wider tracking-[0.16em] uppercase text-neutral-300 font-medium leading-relaxed font-mono">
                 {message}
               </p>
             </div>
